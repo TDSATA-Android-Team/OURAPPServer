@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:MySQL服务端口号/数据库名?serverTimezone=Asia/Shanghai&characterEncoding=utf-8
+    username: 用户名
+    password: 密码
+  freemarker:
+    suffix: .ftl
+  mail:
+    host: smtp服务器地址
+    username: 邮件发送者邮箱
+    password: 授权码
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+          auth: true
+    port: 465
+server:
+  port: 项目端口
+  ssl:
+    key-store: 证书路径（如：classpath:域名.jks）
+    key-store-password: 证书密钥
+    key-store-type: 证书类型（如：jks）
+    enabled: true
